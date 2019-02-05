@@ -6,7 +6,7 @@ const db = require('../helpers/db')
 // endpoints
 router.post('/', async (req, res) => {
   const action = req.body;
-  if (action.action_description && action.project_id) {
+  if (action.action_description && action.project_id && action.notes) {
       db.getProject(action.project_id)
       .then(project => {
           if(project[0]) {
@@ -39,4 +39,8 @@ router.post('/', async (req, res) => {
   }
 })
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb98e847cef7bced69645c5401082e88f2b20aa2
 module.exports = router;
